@@ -71,3 +71,31 @@ function calculator() {
         }
     });
 }
+
+// Mostrar Valores
+const addDisplay = (input, character) => {
+    showOp.textContent = input.value + character.trim();
+    input.value == null || input.value == ""
+    ?  input.value = character.trim()
+    :  input.value += character.trim();
+}
+// back --> char --> del
+const deleteCharacter = (button) => {
+    button.value = button.value.substring(0, button.value.length - 1)
+}
+// Mostrar Resultado
+const printResult = (calc) => {
+    showResult.textContent = eval(calc.value)
+}
+// Caracteres Permitidos
+const checkButtonValue = (string) => {
+    for (let i = 0; i < string.length; i++) {
+      let character = string[i];
+      if (!["/", "*", "+", "-", ".", "(", ")"].includes(character) && isNaN(character)) {
+        alert("invalid entry!");
+        return false;
+      }
+    }
+    return true;
+  };
+calculator();

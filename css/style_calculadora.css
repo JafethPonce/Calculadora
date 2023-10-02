@@ -46,15 +46,16 @@ body {
     color: var(--white);
   }
   .field-name span {
-    color: var(--display);
+    color: var(--gris);
   }
   .back-op {
       background-color: var(--cont-color);
       padding: .5em;
-      border-radius: .3em;
+      border-radius: .7em;
       width: 15.7em;
       border: .01em double var(--gris);
       box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .7);
+      border-bottom: solid #4d3566 10px;
   }
   .field-result {
       background-color: var(--display);
@@ -169,4 +170,3 @@ body {
   .btn-action {
     background-color: var(--btn-action);
   }
-  /*chendo calc v 0.01*/
